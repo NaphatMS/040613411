@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    <table border="1" >
+        <tr >
+            <th >
+                ข้อมูลทั่วไป    <br>
+            n   <br>
+            <input> <br>
+            Email : <br>
+            <input> <br>
+            Phone : <br>
+            <input> <br>
+            ที่อยู่ : <br>
+            <input> <br>
+            รหัสไปรษณีย์ : <input> <br>
+            รูปผู้จอง :
+            </th>
+        </tr>
+        <tr>
+            <tb>
+            <th >
+            ข้อมูลเข้าสู่ระบบ
+            <p> Username :<br>
+                <input type="text"
+                pattern="[0-9a-zA-Z_]{8,}">
+            </p>
+            <p>
+                Password : <br>
+                <input type="text"
+                minlength="8">
+            </p>
+        </th>
+        <tr>
+            <th >
+                ข้อมูลทัวร์ที่ต้องการ
+                <p>
+                    แพคเก็จทัวร์ <select name = country>
+                        <option value="thai">Thailand</option>
+                        <option value="sg">Singapore</option>
+                        <option value="el">England</option>
+                        <option value="cn">China</option>
+                        <option value="US">America</option>
+                    </select> <br>
+                    วันที่เดินทาง <input type="date"><br>
+                    จำนวนผู้เดินทาง <input type="number"min="1" max="10"><br>
+                    เน้นการเทียวเเบบใด <br>
+                    <input type="checkbox" id="item1" name="selectedItems" value="item1">
+                    <label for="item1">ชอปปิ้ง</label><br>
+
+                    <input type="checkbox" id="item2" name="selectedItems" value="item2">
+                    <label for="item2">ธรรมชาติ</label><br>
+
+                     <input type="checkbox" id="item3" name="selectedItems" value="item3">
+                    <label for="item3">ทะเล</label><br>
+                
+                </p>
+                ยอมรับเงื่อนไขเเละตกลง 
+                <input type="radio" id="consent" name="agreement" value="ยินยอม" checked>
+                <label for="consent">ยินยอม </label>
+
+                <input type="radio" id="disagree" name="agreement" value="ไม่ยินยอม">
+                <label   label for="disagree">ไม่ยินยอม </label>
+                
+                <input type="submit" value="จอง" >
+            </th>
+            
+        </tr>
+    </table>
+    
+</body>
+</html>
