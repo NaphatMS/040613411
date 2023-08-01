@@ -1,0 +1,13 @@
+header h1 cite {
+    color: red;
+}
+header+p::first-letter {
+      font-size: 30px;
+}
+.country {
+    color: rgb(28, 248, 28);
+    font-weight: bold;
+}
+section{
+    border-bottom: 2px solid;
+}

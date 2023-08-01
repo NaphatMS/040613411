@@ -1,0 +1,6 @@
+/* styles.css */
+
+/* Add hover effect to the table rows using the ::hover pseudo-selector */
+tr:hover {
+    background-color: lightblue; /* Change this to your desired color */
+}
