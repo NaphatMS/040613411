@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = [
+            {
+            fullname: 'นายตั้งใจ เรียนมาก',
+            age: 18,
+            year: 1,
+            gpa: 3.40,
+            help: true,
+            b_yaer: 'unknow',
+            bursary : false
+            },
+            {
+            fullname: 'นายส่งงาน ตลอดมา',
+            age: 19,
+            year: 2,
+            gpa: 3.00,
+            help: false,
+            b_yaer: 'unknow',
+            bursary : false
+            
+            },
+            {
+            fullname: 'นางสาวใส่ใจ ดีงาม',
+            age: 20,
+            year: 3,
+            gpa: 2.90,
+            help: true,
+            b_yaer: 'unknow',
+            bursary : false
+            }
+        ]
+        let year= [false, false, false];
+        for(let i = 0 ; i<student.length;i++)
+        {
+            student[i].b_yaer=2564-student[i].age;
+            if(student[i].gpa>=3.20)
+            {
+                student[i].bursary=true;
+                console.log(student[i].fullname +' เกิดเมื่อปี '+ student[i].b_yaer + 'ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์');
+            }
+            else
+                if(student[i].year>1)
+                {
+                    if(student[i].gpa>=2.90&&student[i].help==true)
+                    {
+                        student[i].bursary=true;
+                        console.log(student[i].fullname +' เกิดเมื่อปี '+ student[i].b_yaer + 'ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์' + 'และยังช่วยงานภาควิชาด้วย');
+                    }
+                    else  
+                        console.log(student[i].fullname +' เกิดเมื่อปี '+ student[i].b_yaer + 'ไม่ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์' )
+                }
+                else  
+                    console.log(student[i].fullname +' เกิดเมื่อปี '+ student[i].b_yaer + 'ไม่ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์' )
+            if(student[i].bursary==true)
+            {
+                year[i]=true;
+            }
+            
+        }
+        
+        for(let i = 0 ; i < year.length ; i++){
+                console.log('ชั้นปีที่ ' + student[i].year)
+                if(year[i] != false){
+                    console.log(student[i].fullname + ' เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                }
+                else{
+                    console.log('ไม่มี')
+                }
+            }
+        
+    </script>
+    
+</body>
+</html>
