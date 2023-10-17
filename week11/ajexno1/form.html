@@ -1,0 +1,29 @@
+<html><head><meta charset="utf-8">
+<script>
+	var xmlHttp;
+
+    function send() {
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = showResult;
+
+        var m = document.getElementById("m").value;
+        var o = document.getElementById("o").value;
+        var b = document.getElementById("b").value;
+        var url= "add.php?&m=" + m + "&o=" + o+"&b="+b;
+       
+       xmlHttp.open("GET", url);
+       xmlHttp.send();   
+   }
+   function showResult() {
+       if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+           document.getElementById("result").innerHTML = xmlHttp.responseText;
+       }
+   }
+</script></head>
+<body>
+     mango = <input type="text" id="m"><br>
+     orange = <input type="text" id="o"><br>
+     banana = <input type="text" id="b" onkeyup="send()"><br>
+     <span id="result"></span>
+</body></html>
+
